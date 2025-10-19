@@ -1,15 +1,20 @@
 <div>
     <h1>アップロード</h1>
     <form wire:submit.prevent="upload">
-        <input type="file" wire:model="photo" wire:key="{{ $photoIteration }}">
+        <p>
+            <input type="file" wire:model="photo">
+        </p>
+        <div wire:loading wire:target="photo">Uploading...</div>
         @error('photo')
-        <span style="color:red;">
-            {{ $message }}
-        </span>
+            <p style="color:red;">
+                {{ $message }}
+            </p>
         @enderror
-        <button type="submit">保存</button>
+        <p>
+            <button type="submit">保存</button>
+        </p>
     </form>
-    <h1>アップロード済みファイル</h1>
+    <h1>アップロード済み画像一覧</h1>
     @forelse ($uploadedPhotos as $uploadedPhoto)
         <ul>
             <img src="{{ $uploadedPhoto }}"></img></li>

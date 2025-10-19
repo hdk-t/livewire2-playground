@@ -9,16 +9,16 @@ Laravel Livewire2.x の検証用リポジトリ
     docker-compose up -d
 
 ### ライブラリをインストール
-    docker exec -it livewire2-playground_app_1 composer install
+    docker exec -it livewire2-playground-app composer install
 
 ### APP_KEY を生成
-    docker exec -it livewire2-playground_app_1 php artisan key:generate
-
-### 権限を変更
-    docker exec -it livewire2-playground_app_1 "chmod +x ./public/storage/photos"
+    docker exec -it livewire2-playground-app php artisan key:generate
 
 ### リンクを作成
-    docker exec -it livewire2-playground_app_1 php artisan storage:link
+    docker exec -it livewire2-playground-app php artisan storage:link
+
+### ディレクトリ作成
+    docker exec -it livewire2-playground-app bash -c "mkdir ./storage/app/public/photos"
 
 ### トップページにアクセス
 http://localhost:8080
