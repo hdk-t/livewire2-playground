@@ -15,7 +15,7 @@ class PhotoUploader extends Component
 
     /**
      * Livewireライフサイクルフック
-     * アップロード済み画像一覧を取得する
+     * アップロード済み画像一覧を設定する
      */
     public function mount()
     {
@@ -30,7 +30,7 @@ class PhotoUploader extends Component
     /**
      * リアルタイムバリデーション
      * 
-     * Livewireライフサイクルフックにより、ファイルが選択された際に呼び出されることで、
+     * Livewireライフサイクルフックにより、ファイル選択時に呼び出されることで、
      * リアクティブなバリデーションが実現できる。
      */
     public function updatedPhoto()
@@ -71,7 +71,7 @@ class PhotoUploader extends Component
     }
 
     /**
-     * バリデーション
+     * ファイルのバリデーション
      */
     private function validatePhoto()
     {
