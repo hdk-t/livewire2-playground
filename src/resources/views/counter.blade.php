@@ -1,5 +1,5 @@
 @extends('layouts.app')
 @section('content')
-  <a href="{{ route('index') }}">戻る</a>
+  <h1>カウンター</h1>
   <livewire:counter />
 @endsection

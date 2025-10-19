@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+// カウンター
 Route::get('/counter', function () {
     return view('counter');
 })->name('counter');
+
+// 画像アップローダー
+Route::get('/photo-uploader', function () {
+    return view('photo-uploader');
+})->name('photo-uploader');
