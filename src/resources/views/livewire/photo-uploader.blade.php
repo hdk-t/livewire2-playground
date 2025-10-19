@@ -4,7 +4,8 @@
         <p>
             <input type="file" wire:model="photo">
         </p>
-        <div wire:loading wire:target="photo">Uploading...</div>
+        {{-- 進捗インジケータ --}}
+        <div wire:loading wire:target="photo">アップロード中...</div>
         @error('photo')
             <p style="color:red;">
                 {{ $message }}
