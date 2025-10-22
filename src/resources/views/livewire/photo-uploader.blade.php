@@ -1,6 +1,6 @@
 <div>
     <h1>アップロード</h1>
-    <form wire:submit.prevent="upload">
+    <form wire:submit.prevent="save">
         <p>
             <input type="file" wire:model="photo">
         </p>

@@ -39,12 +39,12 @@ class PhotoUploader extends Component
     }
 
     /**
-     * アップロード処理
+     * ファイル保存処理
      * 
-     * 厳密にはファイル自体は選択時にサーバーの一時ディレクトリにアップロードされているため、
+     * ファイル自体は選択時にサーバーの一時ディレクトリにアップロードされているため、
      * ここではそのファイルを永続化する処理を行う。
      */
-    public function upload()
+    public function save()
     {
         if (is_null($this->photo)) {
             return;
